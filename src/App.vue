@@ -7,7 +7,9 @@
       <hr />
       <b></b>
       <p>{{ quotes[index].author }}</p>
-      <button @click="change">Suivant</button>
+      <div class="buttons">
+        <button @click="change">Suivant</button>
+      </div>
     </article>
   </div>
   <div></div>
@@ -62,15 +64,12 @@ const quotes = ref([
   },
 ]);
 
-// console.log(">>>>>> " + quotes.value[index].author);
-
 let index = ref(0);
 
 const change = () => {
   index.value = Math.floor(Math.random() * quotes.value.length);
-  console.log(">>>>>> " + quotes.value[index].author);
+  console.log(index.value);
 };
-console.log(">>>>>> " + quotes[index]);
 </script>
 
 <!-- Style -->
@@ -101,7 +100,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #cfd5e2;
+  /* background-color: #cfd5e2; */
+  background: linear-gradient(to right, #cfd5e2, #8b49c8);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-top: 50px;
   border-radius: 5px;
 }
@@ -116,7 +117,6 @@ body {
 }
 
 span {
-  /* font-family: "Nerko One", cursive; */
   font-size: 1.5em;
   color: #84135e;
   font-weight: bold;
