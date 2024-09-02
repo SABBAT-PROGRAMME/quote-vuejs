@@ -2,21 +2,76 @@
 <template>
   <div class="container">
     <article class="card p-5">
-      <span>« </span>Tatouage Quand les mots se dérobent et que le silence
-      enveloppe mon être, ma peau devient mon ultime refuge, mon temple secret.
-      Les émotions muettes s'inscrivent en traces invisibles, gravées sur cette
-      toile vivante. Chaque battement de cœur murmure l'écho d'un je t'aime non
-      prononcé, un appel muet à l'âme qui peut lire ma peau. Voir sur
+      <span>« </span>{{ quotes[index].quote }}
       <span>»</span>
       <hr />
       <b></b>
-      <p>Sabbat Lumpatshia</p>
+      <p>{{ quotes[index].author }}</p>
+      <button @click="change">Suivant</button>
     </article>
   </div>
+  <div></div>
 </template>
 
 <!-- Script -->
-<script></script>
+<script setup>
+import { ref } from "vue";
+const quotes = ref([
+  {
+    author: "Albert Einstein",
+    quote:
+      "La vie, c'est comme une bicyclette, il faut avancer pour ne pas perdre l'équilibre.",
+  },
+  {
+    author: "Marie Curie",
+    quote: "Rien dans la vie n'est à craindre, tout est à comprendre.",
+  },
+  {
+    author: "Confucius",
+    quote: "Une petite impatience ruine un grand projet.",
+  },
+  {
+    author: "Nelson Mandela",
+    quote: "Cela semble toujours impossible, jusqu'à ce qu'on le fasse.",
+  },
+  {
+    author: "Victor Hugo",
+    quote: "La liberté commence où l'ignorance finit.",
+  },
+  {
+    author: "Mahatma Gandhi",
+    quote:
+      "La force ne vient pas des capacités physiques, elle vient d'une volonté indomptable.",
+  },
+  {
+    author: "René Descartes",
+    quote: "Je pense, donc je suis.",
+  },
+  {
+    author: "Lao Tseu",
+    quote: "Un voyage de mille lieues commence toujours par un premier pas.",
+  },
+  {
+    author: "Walt Disney",
+    quote:
+      "Tous nos rêves peuvent devenir réalité, si nous avons le courage de les poursuivre.",
+  },
+  {
+    author: "Socrate",
+    quote: "La seule chose que je sais, c'est que je ne sais rien.",
+  },
+]);
+
+// console.log(">>>>>> " + quotes.value[index].author);
+
+let index = ref(0);
+
+const change = () => {
+  index.value = Math.floor(Math.random() * quotes.value.length);
+  console.log(">>>>>> " + quotes.value[index].author);
+};
+console.log(">>>>>> " + quotes[index]);
+</script>
 
 <!-- Style -->
 
