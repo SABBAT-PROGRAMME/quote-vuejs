@@ -77,6 +77,7 @@ const change = () => {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+
 /* .roboto-mono-<uniquifier > {
   font-family: "Roboto Mono", monospace;
   font-optical-sizing: auto;
@@ -100,7 +101,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: #cfd5e2; */
   background: linear-gradient(to right, #cfd5e2, #8b49c8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-top: 50px;
@@ -118,7 +118,7 @@ body {
 
 span {
   font-size: 1.5em;
-  color: #84135e;
+  color: #0172ad;
   font-weight: bold;
 }
 
@@ -129,7 +129,7 @@ p {
   color: grey;
 }
 b {
-  background-color: #84135e;
+  background-color: #0172ad;
   width: 10%;
   height: 10%;
 }
