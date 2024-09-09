@@ -2,8 +2,7 @@
 <template>
   <div class="container">
     <article class="card p-5">
-      <span>« </span>{{ quotes[index].quote }}
-      <span>»</span>
+      <h3><span>« </span>{{ quotes[index].quote }} <span>»</span></h3>
       <hr />
       <b></b>
       <p>{{ quotes[index].author }}</p>
@@ -122,14 +121,19 @@ body {
   font-style: italic;
 }
 
+h3 {
+  color: #0172ad;
+}
+
 span {
   font-size: 1.5em;
-  color: #0172ad;
   font-weight: bold;
+  color: gray;
 }
 
 p {
   padding-top: 10px;
+  font-size: 1.4em;
   text-align: left;
   font-family: "Nerko One", cursive;
   color: grey;
